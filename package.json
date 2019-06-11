@@ -1,7 +1,7 @@
 {
   "name": "orm-to-sequelize",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Sequelize todo app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +16,13 @@
     "mysql": "^2.12.0",
     "mysql2": "^1.6.4",
     "sequelize": "^4.41.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-warp-zone/SequelizeToDo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-warp-zone/SequelizeToDo/issues"
+  },
+  "homepage": "https://github.com/the-warp-zone/SequelizeToDo#readme"
 }
