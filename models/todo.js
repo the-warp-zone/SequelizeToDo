@@ -1,11 +1,7 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/config.json");
-
-var toDo = sequelize.define("list", {
-  text: Sequelize.STRING,
-  completed: Sequelize.BOOLEAN
-});
-
-toDo.sync();
-
-module.exports = toDo;
+module.exports = function(sequelize, DataTypes) {
+  var toDo = sequelize.define("toDo", {
+    text: DataTypes.STRING,
+    complete: DataTypes.BOOLEAN
+  });
+  return toDo;
+};
