@@ -31,6 +31,10 @@ module.exports = function(app) {
       .create({
         text: toDoList.text,
         complete: toDoList.complete
+        // isNotNull() {
+        //   if (toDoList.text === null || text === "")
+        //     throw new Error("YA NEED TEXT");
+        // }
       })
       .then(function(results) {
         res.end();
