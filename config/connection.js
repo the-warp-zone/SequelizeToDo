@@ -2,28 +2,19 @@
 // CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
 // *********************************************************************************
 
-var mysql = require("mysql");
+var Sequelize = require("sequelize");
 
 // we placed the connections in this source object
-var source = {
-  // localhost
-  localhost: {
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "",
-    database: "todolist"
-  },
-
-  // jawsDB
-  jawsDB: {
-    host: "<host name>",
-    port: 3306,
-    user: "<name of user>",
-    password: "<password>",
-    database: "<name of database>"
+var sequelize = new Sequelize("todolist", "root", "", {
+  host: "localhost",
+  port: 3306,
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
   }
-};
+});
 
 // we use source.[name of connection] to hook into mysql
 var connection = mysql.createConnection(source.localhost);
